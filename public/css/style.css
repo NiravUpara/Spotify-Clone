@@ -43,6 +43,7 @@ body {
 .library {
     height: 74.4vh;
     position: relative;
+    overflow: auto;
 }
 
 .heading {
@@ -500,8 +501,12 @@ body {
         padding: 4px;
     }
 
+    .heading{
+        padding-bottom: 10px;
+    }
+
     .library {
-        height: 60vh;
+        height: 58vh;
     }
 
     .left {
