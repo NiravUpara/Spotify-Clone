@@ -109,7 +109,7 @@ async function displayAlbum() {
         Array.from(document.getElementsByClassName("card")).forEach(card => {
             card.addEventListener("click", async item => {
                 let folder = item.currentTarget.dataset.folder;
-                songs = await getSongs($folder);
+                songs = await getSongs(folder);
                 playMusic(songs[0]);
                 updateSongListIcons(0);
             })
