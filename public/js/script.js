@@ -64,14 +64,18 @@ function updateSongListIcons(activeIndex) {
 }
 
 const playMusic = (track, pause = false) => {
-    currentSong.src = `/${currFolder}/` + track;
+    currentSong.src = `${currFolder}/` + track;
+    currentSong.load(); // ✅ Required when src is updated dynamically
+
     if (!pause) {
-        currentSong.play();
+        currentSong.play().catch((e) => console.error("Playback error:", e));
         document.querySelector("#play").src = "/img/pause.svg";
     }
+
     document.querySelector(".songinfo").innerHTML = decodeURI(track);
     document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
 };
+
 
 // Display album cards dynamically
 async function displayAlbum() {
