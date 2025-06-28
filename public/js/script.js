@@ -112,7 +112,7 @@ async function displayAlbum() {
                 songs = await getSongs(folder);
                 playMusic(songs[0]);
                 updateSongListIcons(0);
-            });
+            })
         });
     } catch (err) {
         console.error("Error loading albums:", err);
