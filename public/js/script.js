@@ -15,49 +15,45 @@ const formatTime = (seconds) => {
 // Fetch and display songs of selected folder
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`/${folder}/`);
-    let response = await a.text();
 
-    let div = document.createElement("div");
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a");
+    try {
+        let infoResponse = await fetch(`${folder}/info.json`);
+        let info = await infoResponse.json();
 
-    songs = [];
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split(`/${folder}/`)[1].replaceAll("%20", " "));
+        songs = info.songs;
+
+        let songUL = document.querySelector(".songList ul");
+        songUL.innerHTML = "";
+        for (const song of songs) {
+            songUL.innerHTML += `<li>
+                <img class="invert music-icon" width="34" src="/img/music.svg" alt="">
+                <div class="info"><div>${song}</div><div></div></div>
+                <div class="playnow">
+                    <span>Play Now</span>
+                    <img class="invert play-icon" src="/img/play.svg" alt="Play">
+                </div>
+            </li>`;
         }
-    }
 
-    let songUL = document.querySelector(".songList ul");
-    songUL.innerHTML = "";
-    for (const song of songs) {
-        songUL.innerHTML += `<li>
-            <img class="invert music-icon" width="34" src="/img/music.svg" alt="">
-            <div class="info"><div>${song}</div><div></div></div>
-            <div class="playnow">
-                <span>Play Now</span>
-                <img class="invert play-icon" src="/img/play.svg" alt="Play">
-            </div>
-        </li>`;
-    }
-
-    Array.from(document.querySelectorAll(".songList li")).forEach((e, index) => {
-        e.addEventListener("click", () => {
-            if (currentSong.src.includes(songs[index]) && !currentSong.paused) {
-                currentSong.pause();
-                document.querySelector(".playbar #play").src = "/img/play.svg";
-                e.querySelector(".playnow img").src = "/img/play.svg";
-            } else {
-                playMusic(songs[index]);
-                updateSongListIcons(index);
-            }
+        Array.from(document.querySelectorAll(".songList li")).forEach((e, index) => {
+            e.addEventListener("click", () => {
+                if (currentSong.src.includes(songs[index]) && !currentSong.paused) {
+                    currentSong.pause();
+                    document.querySelector(".playbar #play").src = "/img/play.svg";
+                    e.querySelector(".playnow img").src = "/img/play.svg";
+                } else {
+                    playMusic(songs[index]);
+                    updateSongListIcons(index);
+                }
+            });
         });
-    });
 
-    return songs;
+        return songs;
+    } catch (err) {
+        console.error("Error loading songs for", folder, err);
+    }
 }
+
 
 function updateSongListIcons(activeIndex) {
     Array.from(document.querySelectorAll(".songList li")).forEach((e, index) => {
