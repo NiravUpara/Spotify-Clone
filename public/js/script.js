@@ -2,7 +2,7 @@ console.log("Running JS");
 
 let currentSong = new Audio();
 let songs;
-let currFolder;
+let currFolder; 
 
 // Format time into MM:SS
 const formatTime = (seconds) => {
@@ -68,7 +68,7 @@ function updateSongListIcons(activeIndex) {
 }
 
 const playMusic = (track, pause = false) => {
-    currentSong.src = `${currFolder}/` + track;
+    currentSong.src = `/${currFolder}/` + track;
     if (!pause) {
         currentSong.play();
         document.querySelector("#play").src = "/img/pause.svg";
