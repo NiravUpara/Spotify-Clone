@@ -2,7 +2,7 @@ console.log("Running JS");
 
 let currentSong = new Audio();
 let songs;
-let currFolder; 
+let currFolder;
 
 // Format time into MM:SS
 const formatTime = (seconds) => {
@@ -37,16 +37,24 @@ async function getSongs(folder) {
 
         Array.from(document.querySelectorAll(".songList li")).forEach((e, index) => {
             e.addEventListener("click", () => {
-                if (currentSong.src.includes(songs[index]) && !currentSong.paused) {
-                    currentSong.pause();
-                    document.querySelector(".playbar #play").src = "/img/play.svg";
-                    e.querySelector(".playnow img").src = "/img/play.svg";
-                } 
-                else {
-                    playMusic(songs[index]);
+                let clickedSong = songs[index];
+                let isSameSong = currentSong.src.includes(clickedSong);
+
+                if (isSameSong) {
+                    if (currentSong.paused) {
+                        currentSong.play();
+                        document.querySelector("#play").src = "/img/pause.svg";
+                    } else {
+                        currentSong.pause();
+                        document.querySelector("#play").src = "/img/play.svg";
+                    }
+                    updateSongListIcons(currentSong.paused ? -1 : index);
+                } else {
+                    playMusic(clickedSong);
                     updateSongListIcons(index);
                 }
             });
+
         });
 
         return songs;
