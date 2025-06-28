@@ -1,11 +1,11 @@
 [
   {
-    "folder": "Angry_(mood)",
+    "folder": "Angry",
     "title": "Angry Beats",
     "description": "Power-packed songs for angry moods"
   },
   {
-    "folder": "Bright_(mood)",
+    "folder": "Bright",
     "title": "Bright Vibes",
     "description": "Uplifting songs for happy moments"
   },
@@ -15,7 +15,7 @@
     "description": "Trending and energetic tunes"
   },
   {
-    "folder": "Chill_(mood)",
+    "folder": "Chill",
     "title": "Chill Mode",
     "description": "Relax and unwind with smooth music"
   },
@@ -25,7 +25,7 @@
     "description": "Background music while coding"
   },
   {
-    "folder": "Dark_(mood)",
+    "folder": "Dark",
     "title": "Dark Mood",
     "description": "Mysterious and moody tracks"
   },
@@ -35,12 +35,12 @@
     "description": "Best Punjabi hits by Diljit"
   },
   {
-    "folder": "Funky_(mood)",
+    "folder": "Funky",
     "title": "Funky Mood",
     "description": "Groovy and funky music"
   },
   {
-    "folder": "karan aujla",
+    "folder": "karan_aujla",
     "title": "Karan Aujla",
     "description": "Top tracks by Karan Aujla"
   },
@@ -50,7 +50,7 @@
     "description": "Aditya Gadhvi & more"
   },
   {
-    "folder": "Love_(mood)",
+    "folder": "Love",
     "title": "Love Playlist",
     "description": "Romantic songs for your heart"
   },
@@ -60,7 +60,7 @@
     "description": "No copyright sounds"
   },
   {
-    "folder": "Uplifting_(mood)",
+    "folder": "Uplifting",
     "title": "Uplifting Tracks",
     "description": "Positive and motivational music"
   }
