@@ -80,7 +80,7 @@ const playMusic = (track, pause = false) => {
 // Display album cards dynamically
 async function displayAlbum() {
     try {
-        let response = await fetch("/songs/index.json");
+        let response = await fetch("/Songs/index.json");
         let albums = await response.json();
         let cardContainer = document.querySelector(".cardContainer");
         cardContainer.innerHTML = "";
@@ -88,18 +88,18 @@ async function displayAlbum() {
         for (const album of albums) {
             let folder = album.folder;
 
-            let infoResponse = await fetch(`/songs/${folder}/info.json`);
+            let infoResponse = await fetch(`/Songs/${folder}/info.json`);
             let info = await infoResponse.json();
 
             cardContainer.innerHTML += `
-                <div data-folder="/songs/${folder}" class="card">
+                <div data-folder="/Songs/${folder}" class="card">
                     <div class="play">
                         <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="32" cy="32" r="32" fill="" />
                             <polygon points="26,20 26,44 46,32" fill="black" />
                         </svg>
                     </div>
-                    <img src="/songs/${folder}/cover.jpg" width="200" height="200" alt="Cover img">
+                    <img src="/Songs/${folder}/cover.jpg" width="200" height="200" alt="Cover img">
                     <h3>${info.title}</h3>
                     <p>${info.description}</p>
                 </div>
