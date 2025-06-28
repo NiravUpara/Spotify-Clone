@@ -506,11 +506,12 @@ body {
     }
 
     .library {
-        height: 58vh;
+        height: 80vh;
     }
 
     .left {
         width: 95vw;
+        height: 90vh;
     }
 
 }
