@@ -5,6 +5,7 @@ This project is a responsive, fully functional music player inspired by Spotify.
 
 ## Live Demo:
 ---> https://spotify-clone-inky-eight.vercel.app
+
 ---> https://spotify-clone-nirav-uparas-projects.vercel.app/
 
 
@@ -34,36 +35,38 @@ Right Arrow: Next track
 
 ## Project Structure:
 
-public/
-📁 Spotify-Clone/
-├── 📁 public/
-│   ├── 📁 Songs/
-│   │   ├── 📁 Buzzing/
+Spotify-Clone/
+├── public/
+│   ├── Songs/
+│   │   ├── Buzzing/
 │   │   │   ├── bulleya-sultan.mp3
 │   │   │   ├── cover.jpg
 │   │   │   └── info.json
-│   │   ├── 📁 Chill/
+│   │   ├── Chill/
 │   │   │   └── ...
 │   │   └── index.json
-│   ├── 📁 css/
+│   ├── css/
 │   │   ├── style.css
 │   │   └── utility.css
-│   ├── 📁 js/
+│   ├── js/
 │   │   └── script.js
-│   ├── 📁 img/
+│   ├── img/
 │   │   └── play.svg, pause.svg, music.svg, volume.svg, mute.svg, etc.
 │   └── index.html
 ├── README.md
-└── (any other config files like .gitignore, vercel.json etc.)
-
+└── vercel.json / .gitignore (optional config files)
 
 
 ## Tech Stack:
 
 HTML5
+
 CSS
+
 JavaScript
+
 JSON for dynamic data
+
 Vercel for hosting
 
 
@@ -84,6 +87,6 @@ All media and JSON files should be accessible inside the public/Songs folder
 
 
 ### Author: Nirav Upara
-### GitHub: https://github.com/yourusername
+### GitHub: https://github.com/NiravUpara
 
-### License: This project is open-source and available under the MIT License for personal and educational use.
+License: This project is open-source and available under the MIT License for personal and educational use.
