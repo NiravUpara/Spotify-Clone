@@ -35,23 +35,26 @@ Right Arrow: Next track
 ## Project Structure:
 
 public/
-├── Songs/
-│ ├── Buzzing/
-│ │ ├── bulleya-sultan.mp3
-│ │ ├── cover.jpg
-│ │ └── info.json
-│ ├── Chill/
-│ │ └── ...
-│ └── index.json
-├── css/
-│ ├── style.css
-│ └── utility.css
-├── js/
-│ └── script.js
-├── img/
-│ └── play.svg, pause.svg, music.svg, volume.svg, mute.svg, etc.
-├── index.html
-└── README.md
+📁 Spotify-Clone/
+├── 📁 public/
+│   ├── 📁 Songs/
+│   │   ├── 📁 Buzzing/
+│   │   │   ├── bulleya-sultan.mp3
+│   │   │   ├── cover.jpg
+│   │   │   └── info.json
+│   │   ├── 📁 Chill/
+│   │   │   └── ...
+│   │   └── index.json
+│   ├── 📁 css/
+│   │   ├── style.css
+│   │   └── utility.css
+│   ├── 📁 js/
+│   │   └── script.js
+│   ├── 📁 img/
+│   │   └── play.svg, pause.svg, music.svg, volume.svg, mute.svg, etc.
+│   └── index.html
+├── README.md
+└── (any other config files like .gitignore, vercel.json etc.)
 
 
 
