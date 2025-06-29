@@ -89,6 +89,6 @@ All media and JSON files should be accessible inside the public/Songs folder
 
 ### Author: Nirav Upara
 
-### GitHub: https://github.com/yourusername
+### GitHub: https://github.com/NiravUpara
 
 ### License: This project is open-source and available under the MIT License for personal and educational use.
