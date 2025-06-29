@@ -3,7 +3,7 @@
 This project is a responsive, fully functional music player inspired by Spotify. It is built using pure HTML, CSS, and JavaScript and is deployed on Vercel. All static files, including songs and assets, are placed inside the public folder for seamless deployment.
 
 
-## Live Demo:
+## Preview:
 ---> https://spotify-clone-inky-eight.vercel.app
 
 ---> https://spotify-clone-nirav-uparas-projects.vercel.app/
